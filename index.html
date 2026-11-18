@@ -3,26 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A.POLITOCO: noticias y contenidos sobre economía, cultura, Asamblea y medio ambiente.">
-  <title>A.POLITOCO | Información y actualidad</title>
+  <meta name="description" content="A.POLITOCO: documentos y publicaciones sobre economía, cultura, Asamblea y medio ambiente.">
+  <title>A.POLITOCO | Periódico digital</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <header class="site-header" id="encabezado">
-    <div class="brand-image">
-      <img src="assets/encabezado-alpolitoco.jpg" alt="A.POLITOCO, con dos animales sobre el nombre">
-    </div>
-    <div class="header-caption">
-      <p>Información, ideas y actualidad</p>
-    </div>
+  <header class="masthead" id="encabezado">
+    <img src="assets/encabezado-alpolitoco.jpg" alt="Encabezado de A.POLITOCO">
+    <p>Información, ideas y actualidad</p>
   </header>
 
   <nav class="main-nav" aria-label="Menú principal">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-      <span class="menu-icon" aria-hidden="true">☰</span> Menú
-    </button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">☰ Menú</button>
     <ul id="nav-links">
       <li><a href="#economia">Economía</a></li>
       <li><a href="#cultura">Cultura</a></li>
@@ -34,29 +27,35 @@
 
   <main id="contenido">
     <section class="intro">
-      <p class="eyebrow">A.POLITOCO</p>
-      <h1>Lo que pasa, explicado con claridad.</h1>
-      <p>Explora nuestras secciones y encuentra información sobre los temas que nos importan.</p>
+      <p class="eyebrow">A.POLITOCO · PERIÓDICO DIGITAL</p>
+      <h1>Documentos para informarse y comprender.</h1>
+      <p>Selecciona una sección para consultar sus publicaciones. Los documentos PDF se pueden leer aquí mismo, sin salir de la página.</p>
     </section>
 
-    <section class="content-section" id="economia">
-      <div class="section-number">01</div>
-      <div><h2>Economía</h2><p>Noticias, análisis y temas económicos. Aquí podrás publicar artículos, reportajes y novedades de economía.</p></div>
+    <section class="document-section" id="economia">
+      <div class="section-heading"><div><p class="eyebrow">01 · PUBLICACIONES</p><h2>Economía</h2></div></div>
+      <div class="document-list" data-category="economia"></div>
+    </section>
+    <section class="document-section" id="cultura">
+      <div class="section-heading"><div><p class="eyebrow">02 · PUBLICACIONES</p><h2>Cultura</h2></div></div>
+      <div class="document-list" data-category="cultura"></div>
+    </section>
+    <section class="document-section" id="asamblea">
+      <div class="section-heading"><div><p class="eyebrow">03 · PUBLICACIONES</p><h2>Asamblea</h2></div></div>
+      <div class="document-list" data-category="asamblea"></div>
+    </section>
+    <section class="document-section" id="medio-ambiente">
+      <div class="section-heading"><div><p class="eyebrow">04 · PUBLICACIONES</p><h2>Medio ambiente</h2></div></div>
+      <div class="document-list" data-category="medio-ambiente"></div>
     </section>
 
-    <section class="content-section" id="cultura">
-      <div class="section-number">02</div>
-      <div><h2>Cultura</h2><p>Arte, música, literatura, identidad y actividades culturales. Este espacio está listo para tus publicaciones.</p></div>
-    </section>
-
-    <section class="content-section" id="asamblea">
-      <div class="section-number">03</div>
-      <div><h2>Asamblea</h2><p>Información sobre debates, decisiones, proyectos y actividad de la Asamblea.</p></div>
-    </section>
-
-    <section class="content-section" id="medio-ambiente">
-      <div class="section-number">04</div>
-      <div><h2>Medio ambiente</h2><p>Actualidad ambiental, conservación, sostenibilidad y acciones para cuidar nuestro entorno.</p></div>
+    <section class="reader-section" id="lector" hidden>
+      <div class="reader-heading">
+        <div><p class="eyebrow">LECTOR DE DOCUMENTOS</p><h2 id="reader-title">Documento</h2></div>
+        <button class="close-reader" type="button" id="close-reader">Cerrar documento ✕</button>
+      </div>
+      <iframe id="pdf-viewer" title="Visor de documento PDF" loading="lazy"></iframe>
+      <p class="reader-fallback">¿No se muestra el documento? <a id="open-pdf-new" href="#" target="_blank" rel="noopener">Ábrelo en otra pestaña</a> o <a id="download-pdf" href="#" download>descárgalo</a>.</p>
     </section>
   </main>
 
@@ -64,7 +63,6 @@
     <a href="#encabezado">A.POLITOCO</a>
     <p>© <span id="year"></span> A.POLITOCO. Todos los derechos reservados.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
