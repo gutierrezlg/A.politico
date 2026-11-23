@@ -73,4 +73,4 @@ $("#close-reader").addEventListener("click", () => {
   $("#lector").hidden = true;
   $("#pdf-viewer").src = "about:blank";
 });
-renderDocuments();
+//renderDocuments();
